@@ -1,0 +1,79 @@
+<!DocTYPE Html>
+<html lang="en">
+<head>
+<title> Form with Validation </title>
+</head>
+<body>
+<div id="dik">
+<header>
+<a href="#main">Skip to main content </a>
+<ol>
+<li> <a href="home">Home </a></li>
+<li> <a href="contact us">Contact Us </a></li>
+</ol>
+</header>
+<main id="main">
+<h2 id="demo" aria-live="polite"></h2>
+<h1> Welcome to FEST 2021-2022 </h1>
+<p> To be apart of FEST. 
+please fill the given form. And enjoyed the time with you loved one's. </p>
+<form action="s.html" id="1">
+<h2> Instructions </h2>
+<ul>
+<li><p> Required fields are marked with asterious * </p></li>
+<li><p> No empty fields are allowed </p></li>
+</ul><br>
+<label for="fname"> First Name* </label><br>
+<input type="text" id="fname" name="fname" aria-required="true">  <br>
+<label for="lname"> Last Name* </label><br>
+<input type="text" id="lname" name="lname" aria-required="true"> <br>
+<label for="contact"> Contact No* </label><br>
+<input type="tel" id="contact" name="contact" aria-required="true"maxlength="10" pattern="/d[10]"> <br>
+<label for="email"> Email* </label><br>
+<input type="email" id="email" name="email" aria-required="true" pattern="[^ @]*@[^ @]*">
+<br>
+<label for="dob"> Date of Birth </label> <br>
+<input type="date" id="dob" value="2022-03-15">
+<fieldset>
+<legend> Gender* </legend>
+<div ="control">
+<label for="gender_male"> Male  </label><br>
+<input type="radio" id="gender_male" name="gender"> <br>
+</div>
+<div ="control">
+<label for="female"> Female</label><br>
+<input type="radio" id="female" name="female"> <br>
+</div>
+<div ="control">
+<label for="other"> Other </label><br>
+<input type="radio" id="other" name="other"> <br>
+</div>
+</fieldset>
+<fieldset>
+<legend> Hobbies </legend>
+<div ="control">
+<input type="checkbox" id="singing" name="singing">
+<label for="singing"> Singing </label> <br>
+</div>
+<div ="control">
+<input type="checkbox" id="writing" name="writing">
+<label for="writing"> writing </label> <br>
+</div>
+<div ="control">
+<input type="checkbox" id="basketball" name="basketball">
+<label for="basketball"> Basketball </label> <br>
+</div>
+</fieldset>
+<br>
+<button type="reset" onclick="myFunction()">Reset</button>
+<br>
+<input type="submit" value="submit">
+</form>
+</div>
+</body>
+<script id="a">
+function myFunction() {
+alert("Your form has been reset successfully");
+}
+</script>
+</html>
