@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Accessibility and Inaccessibility-View </title>
+<style>
+/* unvisited link */
+#more a:link {
+color: yellow;
+}
+/* visited link */
+#more a:visited {
+color: green;
+}
+/* mouse over link */
+#more a:hover {
+color: pink;
+}
+/* selected link */
+#more a:active {
+color: red;
+}
+</style>
+</head>
+<body>
+<header>
+<a href="#main" class="skip">Skip to main content</a>
+</header>
+<main id="main">
+<h1> Accessble and Inaccessible_View </h1>
+<p> The following links provides an idea/way of accessibility and inaccessibility </p>
+<div style="width:100%;">
+<div style="width: 50%; height: 100px; float: left; background: green;" roll="region" aria-label="primary region">
+<h2> Accessible links </h2>
+<h3> A link with anchor tag </h3>
+<a href="https://www.amazon.in/">Amazon</a><br>
+<h3> A link with blank target attribute </h3>
+<a href="https://www.youtube.com/" target="_blank">Youtube</a><br>
+<h3> A link with self target attribute </h3>
+<a href="https://www.linkedin.com/signup" target="_self">Linkdin</a><br>
+<h3> A link with parent target attribute </h3>
+<a href="https://www.instagram.com/?hl=en" target="_parent">Instagram</a><br>
+<h3> A link with top target attribute </h3>
+<a href=https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D "target="_top">Twitter</a><br>
+<h3> A link with an image </h3>
+<a href="https://www.istockphoto.com/photo/violet-rose-flower-green-leaves-close-up-white-background-gm517689466-8963084">
+<img src="Violet Rose.JPEG" alt="Violet Rose" style="width:42px;height:42px;"></a><br>
+<h3> A link with role and tabindex </h3>
+<div onclick="location.href='https://www.snapdeal.com/';" role="link" tabindex="0"> Snapdeal </div>
+<h3> A link with CSS Properties </h3>
+<div id = more> <a href="https://www.myntra.com/">Myntra</a>
+</div>
+<h3> A link in span with onclick </h3>
+<span class="link" onclick="location='https://www.nykaa.com/'" role="link" tabindex="0">
+NYKAA</span>
+<br>
+<h3> A link in a form of "Skip to content" </h3>
+<a href="#right region" class="skip">Skip to Inaccessible links </a>
+<p>To know more about accessible links 
+<a href="https://www.w3schools.com/html/html_links.asp"> Click Here </a>	</p>
+</div>
+<div style="width: 50%; height: 400%; float: right; background: red;" roll="region" aria-label="secoundary region">
+<h2> Inaccessible links </h2>
+<h3> A link in span </h3>
+<span role="link" tabindex="0" href="https://www.facebook.com/">Facebook</span><br>
+<h3> A link without href </h3>
+<a> Google </a><br>
+<h3> A link incorrect tabindex value </h3>
+<a href="https://www.snapdeal.com/products/women-apparel?sort=plrty&utm_source=earth_semnonbrand&utm_campaign=gm_sok_women_dsa_31_12_21&utm_medium=&utm_term=572299376336_133321960762_{bidstrategy}&gclid=Cj0KCQiAr5iQBhCsARIsAPcwROMrizKysQrbBYnREf9x-cOErsvpe-u6Ox0kqKQej3BsqDxXA_HHxm0aArEeEALw_wcB" 
+tabindex="-1">Snapdeal</a>
+<h3> A link without anchor tag </h3>
+<href="https://www.samsung.com/in/offer/online/samsung-fest/" tabindex="0">Samsung
+<h3> A tel link with missing its attribute </h3>
+<a href="8888870651">8888870651</a>
+<h3> A link inappropriate link text </h3>
+<a href="https://www.oppo.com/in/">https://www.oppo.com/in/</a>
+<h3> A link with missing its role </h3>
+<div onclick="location.href='https://www.vivo.com/in/';" tabindex="0">Vivo</div>
+<h3> A link with missing its tabindex value </h3>
+<span class="link" onclick="location='https://www.realme.com/in/';" role="link">
+Realme </span>
+</div>
+</div>
+<div style="padding-top: 700px; padding-right: 30px; padding-bottom: 50px; padding-left: 700px;">
+<h2> Iframe - Target link </h2>
+<p> In iframe - target link, the link opens in a specified target iframe </p>
+<iframe title="HTML Tutorials" src="../iframe t/demo.html" name="d_a">
+</iframe>
+<ol>
+<li><p><a href="file:///C:/Users/dell/OneDrive/OneDrive%20-%20Tekvision%20Softtech%20And%20Accessibility%20Solutions%20LLP/Documents/iframe%20t/demo.html.html" target="d_a">Demo of html</a></p></li>
+<li><p><a href="file:///C:/Users/dell/OneDrive/OneDrive%20-%20Tekvision%20Softtech%20And%20Accessibility%20Solutions%20LLP/Documents/iframe%20t/save%20girl%20child.html.html" target="d_a">Save girl child</a></p></li>
+</ol>
+</div>
+</main>
+</body>
+</html>
+
