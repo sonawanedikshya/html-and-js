@@ -17,39 +17,31 @@
 <h1> Welcome to FEST 2021-2022 </h1>
 <p> To be apart of FEST. 
 please fill the given form. And enjoyed the time with you loved one's. </p>
-<form action="s.html" id="1">
+<form  id="1">
 <h2> Instructions </h2>
 <ul>
 <li><p> Required fields are marked with asterious * </p></li>
 <li><p> No empty fields are allowed </p></li>
 </ul><br>
 <label for="fname"> First Name* </label><br>
-<input type="text" id="fname" name="fname" aria-required="true">  <br>
+<input type="text" id="fname" name="fname" aria-required="true" oninvalid="alert(Please fill out the first name);" required>  <br>
 <label for="lname"> Last Name* </label><br>
-<input type="text" id="lname" name="lname" aria-required="true"> <br>
+<input type="text" id="lname" name="lname" aria-required="true" required> <br>
 <label for="contact"> Contact No* </label><br>
-<input type="tel" id="contact" name="contact" aria-required="true"maxlength="10" pattern="/d[10]"> <br>
+<input type="tel" id="contact" name="contact" aria-required="true" maxlength="10" pattern="/d[10]" required> <br>
 <label for="email"> Email* </label><br>
-<input type="email" id="email" name="email" aria-required="true" pattern="[^ @]*@[^ @]*">
+<input type="email" id="email" name="email" aria-required="true" pattern="[^ @]*@[^ @]*" required>
 <br>
-<label for="dob"> Date of Birth </label> <br>
-<input type="date" id="dob" value="2022-03-15">
+<label for="datemax"> Date of Birth </label> <br>
+<input type="date" id="datemax" name="datemax" max="2022-03-15">
+<br>
 <fieldset>
-<legend> Gender* </legend>
-<div ="control">
-<label for="gender_male"> Male  </label><br>
-<input type="radio" id="gender_male" name="gender"> <br>
-</div>
-<div ="control">
-<label for="female"> Female</label><br>
-<input type="radio" id="female" name="female"> <br>
-</div>
-<div ="control">
-<label for="other"> Other </label><br>
-<input type="radio" id="other" name="other"> <br>
-</div>
+<legend> Gender </legend>
+<label><input type="radio" name="gender-class" value="female"> Female</label>
+<label><input type="radio" name="gender-class" value="male"> Male</label>
+<label><input type="radio" name="gender-class" value="other"> Other</label>
 </fieldset>
-<fieldset>
+<br>
 <legend> Hobbies </legend>
 <div ="control">
 <input type="checkbox" id="singing" name="singing">
@@ -67,13 +59,16 @@ please fill the given form. And enjoyed the time with you loved one's. </p>
 <br>
 <button type="reset" onclick="myFunction()">Reset</button>
 <br>
-<input type="submit" value="submit">
+<input type="submit" value="submit" onclick="press()"> 
 </form>
 </div>
 </body>
-<script id="a">
+<script>
 function myFunction() {
 alert("Your form has been reset successfully");
+}
+function press() {
+document.write("Your form has been submitted successfully");
 }
 </script>
 </html>
