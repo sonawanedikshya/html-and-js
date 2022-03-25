@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Accordion in HTML </title>
+<style>
+#accordion > h2 > details {
+border: 2px solid blue;
+padding: 15px;
+}
+#accordion > h2 > details > summary {
+border: 1px dotted black;
+padding: 7px;
+}
+#myBtn {
+background-color: violet;
+border: none;
+padding: 15px 32px;
+margin: 4px 2px;
+font-size: 15px;
+display: inline-block;
+}
+button {
+display: block;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+#myModal > div > form > span {
+font-size: 12px;
+border: 2px solid black;
+padding: 2px;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+</style>
+</head>
+<body>
+<h1> Accordion </h1>
+<div id="accordion">
+<h2>
+<details>
+<summary> Charity </summary>
+<button id="myBtn"> Donate </button>
+</details>
+<div id="myModal" class="modal"
+role="dialog" aria-modal="tru" autofocus>
+<div class="modal-content">
+<form action="">
+<label for="denote"> Donation Amount </label>
+<input type="range" id="denote" min="500" max="100000" step="500" autofocus>
+<br>
+<input class="refresh" type="reset" value="Refresh" alert="Do you want to refresh the modal?">
+<span class="close" tabindex="0" role="button"> Skip donation
+</span>
+</form>
+</div>
+</div>
+<script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+modal.style.display = "none";
+}
+window.onclick = function(event) {
+if (event.target == modal) {
+modal.style.display = "none";
+}
+}
+</script>
+</body>
+</html>
